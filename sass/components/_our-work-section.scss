@@ -1,0 +1,39 @@
+// Our Work section styles
+
+.our-work {
+  padding-bottom: 94px;
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+    font-weight: 700;
+    text-align: center;
+    color: $tittle-text-color;
+  }
+
+  &__gallery {
+    position: relative;
+    display: flex;
+    list-style: none;
+  }
+
+  &__item + &__item {
+    margin-left: 30px;
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    padding: 27px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: $our-work-text-bg-color;
+    color: $secondary-text-color;
+  }
+}
