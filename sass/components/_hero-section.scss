@@ -1,10 +1,10 @@
 // Hero section styles
 
 .hero-overlay {
-  padding: 118px 0;
+  padding: 118px 0px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 480px;
+  max-width: 480px;
   height: 400px;
   text-align: center;
   background-color: $background-color;

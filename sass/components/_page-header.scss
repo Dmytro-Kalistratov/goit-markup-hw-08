@@ -132,12 +132,49 @@
 
 .header-display {
   display: none;
+
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 48px 40px;
+  box-shadow: $composite-shadow;
   background-color: $secondary-text-color;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.menu__button {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  background-color: $secondary-text-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  & .menu__close {
+    display: none;
+  }
+
+  &.is-open .menu__close {
+    display: block;
+  }
+
+  &.is-open .menu__open {
+    display: none;
+  }
 }
 
 // Navigation Logo styles
@@ -161,11 +198,18 @@
     list-style: none;
     margin-bottom: 302px;
   }
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 }
+
 .nav__link {
-  display: block;
   color: $tittle-text-color;
-  margin-bottom: 32px;
   text-decoration: none;
   font-weight: 500;
   font-size: 40px;
@@ -177,10 +221,6 @@
     color: $button-focus-background-color;
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   &:hover,
   &:focus {
     color: $accent-color;
@@ -190,13 +230,19 @@
 // // Header Address styles
 
 .address {
+  display: flex;
+  flex-direction: column-reverse;
   list-style: none;
-  margin-bottom: 64px;
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__item:first-child {
+    margin-bottom: 64px;
+  }
 
   &__link {
-    display: block;
-    margin-bottom: 32px;
-    align-items: center;
     text-decoration: none;
     font-weight: 500;
     font-size: 34px;
@@ -205,8 +251,8 @@
     transition: color $transition-options;
   }
 
-  &__link:last-child {
-    margin-bottom: 0;
+  &__link--mobile {
+    font-size: 24px;
   }
 
   &__icon {
