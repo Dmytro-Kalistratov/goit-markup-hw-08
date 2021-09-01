@@ -1,16 +1,70 @@
 // Footer styles
 
+// .footer {
+//   margin-left: auto;
+//   margin-right: auto;
+//   min-width: 1200px;
+//   background-color: $background-color;
+//   padding: 60px 0 60px;
+
+//   &__display {
+//     display: flex;
+//     align-items: baseline;
+//   }
+
+//   &__logo {
+//     display: inline-block;
+//     margin-bottom: 20px;
+//     text-decoration: none;
+//     color: $accent-color;
+//     font-family: $secondary-font;
+//     font-size: 26px;
+//     line-height: 1.17;
+//   }
+
+//   &__logo-half {
+//     color: $secondary-text-color;
+//   }
+
+//   &__location {
+//     margin-bottom: 9px;
+//     color: $secondary-text-color;
+//   }
+
+//   &__location,
+//   &__link {
+//     font-style: normal;
+//     font-size: 14px;
+//     line-height: 1.7;
+//   }
+
+//   &__link {
+//     text-decoration: none;
+//     color: $unique-color;
+//     transition: color $transition-options;
+//   }
+
+//   &__item:not(:last-child) {
+//     margin-bottom: 9px;
+//   }
+// }
+
+// .footer__address {
+//   list-style: none;
+
+//   & .footer__link:hover,
+//   & .footer__link:focus {
+//     color: $accent-color;
+//   }
+// }
+
 .footer {
+  display: flex;
   margin-left: auto;
   margin-right: auto;
-  min-width: 1200px;
+  min-width: 480px;
   background-color: $background-color;
   padding: 60px 0 60px;
-
-  &__display {
-    display: flex;
-    align-items: baseline;
-  }
 
   &__logo {
     display: inline-block;
@@ -27,7 +81,7 @@
   }
 
   &__location {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     color: $secondary-text-color;
   }
 
@@ -47,30 +101,75 @@
   &__item:not(:last-child) {
     margin-bottom: 9px;
   }
-}
 
-.footer__address {
-  list-style: none;
+  .footer__address {
+    list-style: none;
 
-  & .footer__link:hover,
-  & .footer__link:focus {
-    color: $accent-color;
+    & .footer__link:hover,
+    & .footer__link:focus {
+      color: $accent-color;
+    }
   }
 }
 
 // Join block styles
 
+// .join {
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.03em;
+//   text-transform: uppercase;
+//   color: $secondary-text-color;
+//   margin-bottom: 20px;
+
+//   &__display {
+//     margin-left: 70px;
+//   }
+
+//   &__list {
+//     display: flex;
+//     list-style: none;
+//   }
+
+//   &__item + &__item {
+//     margin-left: 10px;
+//   }
+
+//   &__link {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 44px;
+//     height: 44px;
+//     border-radius: 50%;
+//     text-decoration: none;
+//     background-color: $social-footer-bg-color;
+//     transition: background-color $transition-options;
+//   }
+
+//   &__link:hover,
+//   &__link:focus {
+//     background-color: $accent-color;
+//   }
+
+//   &__icon {
+//     fill: $secondary-text-color;
+//   }
+// }
+
 .join {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $secondary-text-color;
   margin-bottom: 20px;
 
   &__display {
-    margin-left: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   &__list {
@@ -105,10 +204,55 @@
 }
 
 // Subscribe Form block styles
+// Origin styles -->
+// .subscribe-form {
+//   margin-left: 90px;
+
+//   &__title {
+//     margin-bottom: 20px;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//     color: $secondary-text-color;
+//   }
+
+//   &__elements-position {
+//     display: flex;
+//     align-items: stretch;
+//   }
+
+//   &__input {
+//     width: 360px;
+//     padding: 15px 16px;
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+//     color: $secondary-text-color;
+//     background-color: $background-color;
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     border-radius: 4px;
+//     box-shadow: $basic-shadow;
+//     transition: border $transition-options;
+//   }
+
+//   &__input::placeholder {
+//     color: $unique-color;
+//   }
+
+//   &__:focus {
+//     border: 1px solid $accent-color;
+//   }
+
+//   &__icon {
+//     margin-left: 10px;
+//   }
+// }
+// <-- end.
 
 .subscribe-form {
-  margin-left: 90px;
-
   &__title {
     margin-bottom: 20px;
     font-weight: 700;
@@ -119,14 +263,10 @@
     color: $secondary-text-color;
   }
 
-  &__elements-position {
-    display: flex;
-    align-items: stretch;
-  }
-
   &__input {
-    width: 360px;
+    width: 450px;
     padding: 15px 16px;
+    margin-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -154,7 +294,7 @@
 
 .button--subscribe-form {
   @include button();
-  margin-left: 12px;
+  margin-left: 0 auto;
   display: flex;
   align-items: center;
   text-align: center;
