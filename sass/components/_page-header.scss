@@ -126,7 +126,7 @@
 
 .header {
   position: relative;
-  padding: 16px 15px;
+  padding: 16px 0;
   border-bottom: #ececec 1px solid;
 }
 
@@ -148,31 +148,30 @@
     fill: $accent-color;
   }
 
-  & .menu__close {
+  & .menu__open {
     display: none;
   }
 
-  &.is-open .menu__close {
+  &.is-open .menu__open {
     display: block;
   }
 
-  &.is-open .menu__open {
+  &.is-open .menu__close {
     display: none;
   }
 }
 
 .header-mobile {
-  display: none;
   z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   padding: 48px 40px;
   box-shadow: $composite-shadow;
   background-color: $secondary-text-color;
-
+  overflow-y: scroll;
   transform: translate(100%);
   transition: $transition-options;
 

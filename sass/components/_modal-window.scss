@@ -6,8 +6,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  // width: 100%;
+  overflow-y: scroll;
+  width: 100%;
   height: 100%;
+  padding: 92px 15px;
   background-color: $backdrop-bg-color;
   transition: opacity $transition-options;
 
@@ -15,27 +17,33 @@
     opacity: 0;
     pointer-events: none;
   }
+
+  @media screen and (min-width: 530px) {
+    padding: 0;
+  }
 }
 
 .modal {
   opacity: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  // width: 450px;
-  height: 610px;
   background-color: $secondary-text-color;
   box-shadow: $composite-shadow;
   border-radius: 4px;
   transition: opacity $transition-options;
+
+  @media screen and (min-width: 530px) {
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .modal__close-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  // width: 30px;
+  top: 100px;
+  right: 23px;
+  width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -45,12 +53,17 @@
   &:hover .modal__close-button-icon {
     fill: $accent-color;
   }
+
+  @media screen and (min-width: 530px) {
+    top: 8px;
+    right: 8px;
+  }
 }
 
 // Callback Form block styles
 
 .callback-form {
-  // width: 100%;
+  width: 100%;
   padding: 40px;
 
   &__title {
@@ -130,7 +143,7 @@
   &__check-mark {
     display: inline-block;
     margin-right: 8px;
-    // width: 15px;
+    width: 15px;
     height: 15px;
     border: 2px solid $tittle-text-color;
     border-radius: 2px;
@@ -151,7 +164,7 @@
   margin-bottom: 30px;
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 

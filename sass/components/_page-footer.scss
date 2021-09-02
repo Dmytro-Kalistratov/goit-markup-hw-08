@@ -63,6 +63,10 @@
   background-color: $background-color;
   padding: 60px 0;
 
+  &__position + &__position {
+    margin-top: 60px;
+  }
+
   &__logo {
     display: inline-block;
     margin-bottom: 20px;
@@ -156,7 +160,6 @@
 // }
 
 .join {
-  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -179,7 +182,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -259,6 +261,7 @@
   }
 
   &__input {
+    width: 100%;
     padding: 15px 16px;
     margin-bottom: 20px;
     font-weight: 400;

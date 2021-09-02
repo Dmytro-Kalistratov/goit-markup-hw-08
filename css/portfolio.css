@@ -6,6 +6,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -41,6 +45,14 @@ textarea {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
   }
 }
 
@@ -60,7 +72,7 @@ textarea {
 
 .header {
   position: relative;
-  padding: 16px 15px;
+  padding: 16px 0;
   border-bottom: #ececec 1px solid;
 }
 
@@ -82,30 +94,30 @@ textarea {
   fill: #2196f3;
 }
 
-.menu__button .menu__close {
+.menu__button .menu__open {
   display: none;
 }
 
-.menu__button.is-open .menu__close {
+.menu__button.is-open .menu__open {
   display: block;
 }
 
-.menu__button.is-open .menu__open {
+.menu__button.is-open .menu__close {
   display: none;
 }
 
 .header-mobile {
-  display: none;
   z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   padding: 48px 40px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
+  overflow-y: scroll;
   -webkit-transform: translate(100%);
           transform: translate(100%);
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -375,6 +387,10 @@ textarea {
   padding: 60px 0;
 }
 
+.footer__position + .footer__position {
+  margin-top: 60px;
+}
+
 .footer__logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -421,7 +437,6 @@ textarea {
 }
 
 .join {
-  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -455,7 +470,6 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 60px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -484,6 +498,7 @@ textarea {
 }
 
 .subscribe-form__input {
+  width: 100%;
   padding: 15px 16px;
   margin-bottom: 20px;
   font-weight: 400;
