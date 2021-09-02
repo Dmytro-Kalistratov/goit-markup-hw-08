@@ -130,24 +130,8 @@
   border-bottom: #ececec 1px solid;
 }
 
-.header-display {
-  display: none;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 48px 40px;
-  box-shadow: $composite-shadow;
-  background-color: $secondary-text-color;
-
-  &.is-open {
-    display: block;
-  }
-}
-
 .menu__button {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -174,6 +158,25 @@
 
   &.is-open .menu__open {
     display: none;
+  }
+}
+
+.header-mobile {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  padding: 48px 40px;
+  box-shadow: $composite-shadow;
+  background-color: $secondary-text-color;
+
+  transform: translate(100%);
+  transition: $transition-options;
+
+  &.is-open {
+    transform: translate(0);
   }
 }
 
@@ -219,6 +222,10 @@
   &--current:focus,
   &--current:hover {
     color: $button-focus-background-color;
+  }
+
+  &--current {
+    color: $accent-color;
   }
 
   &:hover,

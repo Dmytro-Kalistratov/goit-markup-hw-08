@@ -59,12 +59,10 @@
 // }
 
 .footer {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 480px;
+  text-align: center;
+  min-width: 100%;
   background-color: $background-color;
-  padding: 60px 0 60px;
+  padding: 60px 0;
 
   &__logo {
     display: inline-block;
@@ -174,6 +172,7 @@
 
   &__list {
     display: flex;
+    justify-content: center;
     list-style: none;
   }
 
@@ -294,10 +293,10 @@
 
 .button--subscribe-form {
   @include button();
-  margin-left: 0 auto;
   display: flex;
   align-items: center;
   text-align: center;
+  margin: 0 auto;
 
   &:hover,
   &:focus {

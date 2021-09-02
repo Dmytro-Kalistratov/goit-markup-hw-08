@@ -1,6 +1,7 @@
 // Modal Window styles
 
 .backdrop {
+  z-index: 3;
   opacity: 1;
   position: fixed;
   top: 0;
@@ -22,8 +23,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 530px;
-  height: 580px;
+  width: 450px;
+  height: 610px;
   background-color: $secondary-text-color;
   box-shadow: $composite-shadow;
   border-radius: 4px;

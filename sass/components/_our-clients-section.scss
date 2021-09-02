@@ -55,7 +55,7 @@
 // }
 
 .clients {
-  padding: 60px 0 60px;
+  padding: 60px 0;
 
   &__title {
     text-align: center;
@@ -71,7 +71,7 @@
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
-    margin: -15px;
+    margin: -15px -30px;
   }
 
   &__item {
