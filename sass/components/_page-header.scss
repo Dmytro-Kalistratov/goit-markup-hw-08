@@ -162,12 +162,13 @@
 }
 
 .header-mobile {
+  display: none;
   z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
-  height: 100vh;
+  width: 100vw;
+  height: 100vw;
   padding: 48px 40px;
   box-shadow: $composite-shadow;
   background-color: $secondary-text-color;
