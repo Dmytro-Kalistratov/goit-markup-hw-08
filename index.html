@@ -21,37 +21,45 @@
     <!--Шапка-->
     <header class="header">
         <div class="container">
-            <a href="./index.html" class="nav__header-logo">Web<span class="nav__header-logo-half">Studio</span></a>
-            <button class="menu__button is-open" aria-expanded="false" data-menu-button>
-                <svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="menu__open" href="./images/symbol-defs.svg#mobile-menu"></use>
-                    <use class="menu__close" href="./images/symbol-defs.svg#mobile-menu_close"></use>
-                </svg>
-            </button>
-            <div class="header-mobile" data-menu>
-                <nav class="nav">
-                    <ul class="nav__menu">
-                        <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a></li>
-                        <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
-                        <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+            <div class="header__logo-mobile">
+                <a href="./index.html" class="nav__header-logo">Web<span class="nav__header-logo-half">Studio</span></a>
+                <button class="menu__button is-open" aria-expanded="false" data-menu-button>
+                    <svg class="menu__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="menu__open" href="./images/symbol-defs.svg#mobile-menu"></use>
+                        <use class="menu__close" href="./images/symbol-defs.svg#mobile-menu_close"></use>
+                    </svg>
+                </button>
+                <div class="header-mobile" data-menu>
+                    <nav class="nav">
+                        <ul class="nav__menu">
+                            <li class="nav__item"><a class="nav__link nav__link--current" href="./index.html">Студия</a></li>
+                            <li class="nav__item"><a class="nav__link"
+                                    href="./portfolio.html">Портфолио</a></li>
+                            <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="address">
+                        <li class="address__item"><a class="address__link address__link--mobile"
+                                href="mailto:info@devstudio.com"><svg class="address__icon" width="16" height="12">
+                                    <use href="./images/symbol-defs.svg#mail"></use>
+                                </svg>info@devstudio.com</a></li>
+                        <li class="address__item"><a class="address__link" href="tel:+380961111111"><svg
+                                    class="address__icon" width="10" height="16">
+                                    <use href="./images/symbol-defs.svg#smartphone"></use>
+                                </svg>+38 096 111 11 11</a></li>
                     </ul>
-                </nav>
-                <ul class="address">
-                    <li class="address__item"><a class="address__link address__link--mobile" href="mailto:info@devstudio.com"><svg class="address__icon"
-                                width="16" height="12">
-                                <use href="./images/symbol-defs.svg#mail"></use>
-                            </svg>info@devstudio.com</a></li>
-                    <li class="address__item"><a class="address__link" href="tel:+380961111111"><svg class="address__icon"
-                                width="10" height="16">
-                                <use href="./images/symbol-defs.svg#smartphone"></use>
-                            </svg>+38 096 111 11 11</a></li>
-                </ul>
-                <ul class="social">
-                    <li class="social__item"><a href="#" class="social__link">Instagram</a></li>
-                    <li class="social__item"><a href="#" class="social__link">Twitter</a></li>
-                    <li class="social__item"><a href="#" class="social__link">Facebook</a></li>
-                    <li class="social__item"><a href="#" class="social__link">LinkedIn</a></li>
-                </ul>
+                    <ul class="social">
+                        <li class="social__item"><a href="#" class="social__link">Instagram</a><span
+                                class="social__line"></span></li>
+                        <li class="social__item"><a href="#" class="social__link">Twitter</a><span
+                                class="social__line"></span>
+                        </li>
+                        <li class="social__item"><a href="#" class="social__link">Facebook</a><span
+                                class="social__line"></span>
+                        </li>
+                        <li class="social__item"><a href="#" class="social__link">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>

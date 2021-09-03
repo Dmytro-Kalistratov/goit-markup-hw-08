@@ -151,6 +151,21 @@
   &__item:nth-child(4n) {
     margin-left: 0;
   }
+
+  @media screen and (min-width: 768px) {
+    &__filtres {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item:nth-child(4n) {
+    margin-left: 8px;
+  }
+
+  &__item + &__item {
+    margin-bottom: 0;
+  }
 }
 
 .button--portfolio-filtres {
@@ -178,7 +193,6 @@
   list-style: none;
 
   &__indent {
-    // width: 450px;
     position: relative;
     margin-bottom: 30px;
   }
@@ -214,7 +228,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    // width: 100%;
+    width: 100%;
     height: 100%;
     background-color: $portfolio-overlay-bg-color;
     transform: translateY(100%);
@@ -246,5 +260,36 @@
     line-height: 2;
     font-weight: 700;
     color: $tittle-text-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+    margin-right: -30px;
+  }
+
+  &__indent {
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__indent:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__indent:nth-child(2n) {
+      margin-right: 30px;
+    }
+
+    &__indent:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &__indent:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
   }
 }

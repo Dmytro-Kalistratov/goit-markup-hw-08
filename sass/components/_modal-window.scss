@@ -18,24 +18,29 @@
     pointer-events: none;
   }
 
-  @media screen and (min-width: 530px) {
+  @media screen and (min-width: 510px) {
     padding: 0;
   }
 }
 
 .modal {
+  width: 100%;
+  max-width: 480px;
   opacity: 1;
   background-color: $secondary-text-color;
   box-shadow: $composite-shadow;
   border-radius: 4px;
   transition: opacity $transition-options;
 
-  @media screen and (min-width: 530px) {
-    width: 480px;
+  @media screen and (min-width: 510px) {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 530px;
   }
 }
 
@@ -54,7 +59,7 @@
     fill: $accent-color;
   }
 
-  @media screen and (min-width: 530px) {
+  @media screen and (min-width: 510px) {
     top: 8px;
     right: 8px;
   }
