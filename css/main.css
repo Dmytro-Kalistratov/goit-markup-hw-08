@@ -514,7 +514,6 @@ textarea {
 @media screen and (min-width: 1200px) {
   .hero-overlay {
     padding: 200px 0;
-    max-width: 1600px;
     height: 600px;
   }
   .hero-overlay__title {
@@ -784,6 +783,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .team__card {
     margin-right: 30px;
+    width: 354px;
   }
   .team__card:nth-child(2n) {
     margin-right: 0;
@@ -796,6 +796,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .team__card {
     margin-bottom: 0;
+    width: 270px;
   }
   .team__card:nth-child(2n) {
     margin-right: 30px;
