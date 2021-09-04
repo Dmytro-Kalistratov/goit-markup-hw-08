@@ -130,13 +130,22 @@
   border-bottom: #ececec 1px solid;
 
   @media screen and (min-width: 768px) {
-    padding: 0;
+    padding: 20px 0;
+    min-height: 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 25px 0;
   }
 }
 
 .header__logo-mobile {
   @media screen and (min-width: 768px) {
     display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: center;
   }
 }
 
@@ -204,6 +213,11 @@
     overflow-y: inherit;
     transform: translate(0);
     display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: center;
   }
 }
 
@@ -221,8 +235,13 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 26px 0;
     margin-right: 88px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
   }
 }
 
@@ -287,14 +306,12 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     font-size: 14px;
 
     &--current::after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      top: calc(100% + 29px);
       left: 0px;
       width: 100%;
       display: block;
@@ -312,6 +329,12 @@
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &--current::after {
+      top: calc(100% + 29px);
     }
   }
 }
@@ -354,7 +377,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 21px 0;
     flex-direction: column;
     margin-left: auto;
 
@@ -381,6 +403,22 @@
     &__icon:hover,
     &__icon:focus {
       fill: currentColor;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+
+      &__link {
+        font-size: 14px;
+      }
+
+      &__item + &__item {
+        margin-left: 30px;
+      }
+
+      &__item:first-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

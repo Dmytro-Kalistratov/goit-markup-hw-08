@@ -59,18 +59,18 @@
 // }
 
 .footer {
-  text-align: center;
   background-color: $background-color;
   padding: 60px 0;
 
-  &__position + &__position {
-    margin-top: 60px;
+  &__position {
+    text-align: center;
   }
 
   &__logo {
     display: inline-block;
     margin-bottom: 20px;
     text-decoration: none;
+    font-style: normal;
     color: $accent-color;
     font-family: $secondary-font;
     font-size: 26px;
@@ -109,6 +109,33 @@
     & .footer__link:hover,
     & .footer__link:focus {
       color: $accent-color;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__display {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__display {
+      justify-content: flex-start;
+    }
+
+    &__position {
+      text-align: left;
+    }
+
+    &__position--address {
+      margin-right: 70px;
+    }
+
+    &__position--social {
+      margin-right: 93px;
     }
   }
 }
@@ -160,6 +187,7 @@
 // }
 
 .join {
+  margin-top: 60px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -197,6 +225,10 @@
 
   &__icon {
     fill: $secondary-text-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
   }
 }
 
@@ -251,6 +283,7 @@
 
 .subscribe-form {
   &__title {
+    margin-top: 60px;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -287,10 +320,32 @@
   &__icon {
     margin-left: 10px;
   }
+
+  @media screen and (min-width: 768px) {
+    &__input {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__title {
+      margin-top: 0;
+    }
+
+    &__input {
+      width: 358px;
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+
+    &__display {
+      display: flex;
+    }
+  }
 }
 
 .button--subscribe-form {
-  @include button();
+  @include button($size: 10px 28px);
   display: flex;
   align-items: center;
   text-align: center;

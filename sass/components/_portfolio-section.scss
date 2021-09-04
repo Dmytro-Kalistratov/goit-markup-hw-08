@@ -157,14 +157,14 @@
       justify-content: center;
       margin-bottom: 30px;
     }
-  }
 
-  &__item:nth-child(4n) {
-    margin-left: 8px;
-  }
+    &__item:nth-child(4n) {
+      margin-left: 8px;
+    }
 
-  &__item + &__item {
-    margin-bottom: 0;
+    &__item + &__item {
+      margin-bottom: 0;
+    }
   }
 }
 

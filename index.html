@@ -121,13 +121,16 @@
             <div class="container">
                 <h2 class="our-work__title">Чем мы занимаемся</h2>
                 <ul class="our-work__gallery">
-                    <li class="our-work__item"><img src="./images/box-2.jpg" alt="Программирование" width="370">
+                    <li class="our-work__item"><img srcset="./images/what-we-do/img1-740.jpg 2x,./images/what-we-do/img1-370.jpg 1x"
+                        src="./images/what-we-do/img1-370.jpg" alt="Разработка десктопных приложений" width="370" />
                         <h3 class="our-work__label">Декстопные приложения</h3>
                     </li>
-                    <li class="our-work__item"><img src="./images/box-3.jpg" alt="Дизайн" width="370">
+                    <li class="our-work__item"><img srcset="./images/what-we-do/img2-740.jpg 2x,./images/what-we-do/img2-370.jpg 1x"
+                        src="./images/what-we-do/img2-370.jpg" alt="Разработка мобильных приложений" width="370" />
                         <h3 class="our-work__label">Мобильные приложения</h3>
                     </li>
-                    <li class="our-work__item"><img src="./images/box-1.jpg" alt="Вёрстка" width="370">
+                    <li class="our-work__item"><img srcset="./images/what-we-do/img3-740.jpg 2x,./images/what-we-do/img3 -370.jpg 1x"
+                        src="./images/what-we-do/img3-370.jpg" alt="Дизайнерские решения" width="370" class="wedo-item__image" />
                         <h3 class="our-work__label">Дизайнерские решения</h3>
                     </li>
                 </ul>
@@ -281,53 +284,56 @@
     <!-- Footer styles -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__position">
-                <a class="footer__logo" href="./index.html">Web<span class="footer__logo-half">Studio</span></a>
-                <address>
-                    <p class="footer__location">г. Киев, пр-т Леси Украинки, 26</p>
-                    <ul class="footer__address">
-                        <li class="footer__item"><a class="footer__link" href="mailto:info@example.com">info@example.com</a></li>
-                        <li class="footer__item"><a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+            <div class="footer__display">
+                <div class="footer__position footer__position--address">
+                    <address>
+                        <a class="footer__logo" href="./index.html">Web<span class="footer__logo-half">Studio</span></a>
+                        <p class="footer__location">г. Киев, пр-т Леси Украинки, 26</p>
+                        <ul class="footer__address">
+                            <li class="footer__item"><a class="footer__link" href="mailto:info@example.com">info@example.com</a></li>
+                            <li class="footer__item"><a class="footer__link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- Join block -->
+                <div class="footer__position footer__position--social">
+                    <p class="join">Присоединяйтесь</p>
+                    <ul class="join__list">
+                        <li class="join__item"><a class="join__link" href="https://www.instagram.com/?hl=en">
+                                <svg class="join__icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#instagram"></use>
+                                </svg>
+                            </a></li>
+                        <li class="join__item"><a class="join__link" href="https://mobile.twitter.com/login">
+                                <svg class="join__icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#twitter"></use>
+                                </svg>
+                            </a></li>
+                        <li class="join__item"><a class="join__link" href="https://www.facebook.com/">
+                                <svg class="join__icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#facebook"></use>
+                                </svg>
+                            </a></li>
+                        <li class="join__item"><a class="join__link" href="https://www.linkedin.com/">
+                                <svg class="join__icon" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#linkedin"></use>
+                                </svg>
+                            </a></li>
                     </ul>
-                </address>
-            </div>
-            <!-- Join block -->
-            <div class="footer__position">
-                <p class="join">Присоединяйтесь</p>
-                <ul class="join__list">
-                    <li class="join__item"><a class="join__link" href="https://www.instagram.com/?hl=en">
-                            <svg class="join__icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#instagram"></use>
-                            </svg>
-                        </a></li>
-                    <li class="join__item"><a class="join__link" href="https://mobile.twitter.com/login">
-                            <svg class="join__icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#twitter"></use>
-                            </svg>
-                        </a></li>
-                    <li class="join__item"><a class="join__link" href="https://www.facebook.com/">
-                            <svg class="join__icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#facebook"></use>
-                            </svg>
-                        </a></li>
-                    <li class="join__item"><a class="join__link" href="https://www.linkedin.com/">
-                            <svg class="join__icon" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#linkedin"></use>
-                            </svg>
-                        </a></li>
-                </ul>
-            </div>
-            <div class="footer__position">
-                <!-- Subscribe Form block -->
-                <form class="subscribe-form">
-                    <p class="subscribe-form__title">Подпишитесь на рассылку</p>
-                    <div>
-                        <input class="subscribe-form__input" type="email" name="email-footer" placeholder="E-mail"/>
-                        <button class="button button--subscribe-form" type="submit">Подписаться<svg class="subscribe-form__icon" width="24" height="24">
-                            <use href="./images/symbol-defs.svg#submit-footer"></use>
-                        </svg></button>
-                    </div>
-                </form>
+                </div>
+                <div class="footer__position">
+                    <!-- Subscribe Form block -->
+                    <form class="subscribe-form">
+                        <p class="subscribe-form__title">Подпишитесь на рассылку</p>
+                        <div class="subscribe-form__display">
+                            <input class="subscribe-form__input" type="email" name="email-footer" placeholder="E-mail" />
+                            <button class="button button--subscribe-form" type="submit">Подписаться<svg class="subscribe-form__icon"
+                                    width="24" height="24">
+                                    <use href="./images/symbol-defs.svg#submit-footer"></use>
+                                </svg></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
