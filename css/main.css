@@ -23,8 +23,11 @@ ul {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 button {
@@ -232,7 +235,7 @@ textarea {
 
 .nav__menu {
   list-style: none;
-  margin-bottom: 302px;
+  margin-bottom: 100px;
 }
 
 .nav__item {
@@ -489,6 +492,9 @@ textarea {
 
 @media screen and (min-width: 1600px) {
   .hero-overlay {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
     background-size: cover;
   }
 }

@@ -23,8 +23,11 @@ ul {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 button {
@@ -232,7 +235,7 @@ textarea {
 
 .nav__menu {
   list-style: none;
-  margin-bottom: 302px;
+  margin-bottom: 100px;
 }
 
 .nav__item {
@@ -525,6 +528,10 @@ textarea {
   background-color: #2196f3;
 }
 
+.projects img {
+  height: 100%;
+}
+
 .projects {
   list-style: none;
 }
@@ -620,8 +627,14 @@ textarea {
     margin-right: 30px;
     margin-bottom: 30px;
   }
+  .projects__thumb {
+    height: 294px;
+  }
   .projects__indent:nth-child(2n) {
     margin-right: 0;
+  }
+  .projects__image {
+    height: 100%;
   }
 }
 
